@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>health</title>
+</head>
+
+<body>
+    <div class="bg">
+        <!-- top盒子 -->
+        <div class="top">
+            <!-- 日期时间盒子 -->
+            <div class="time">
+                <!-- 健康宝logo -->
+                <span>
+                    <img src="uploads/jiankangbao.png" alt="">
+                </span>
+                <!-- 健康宝logo -->
+
+                <!-- 日期时间 -->
+                <div id="show_time" class="show">
+                    <script>
+                        //这里代码多了几行，但是不会延迟显示，速度比较好，格式可以自定义，是理想的时间显示
+                        setInterval("fun(show_time)", 1);
+                        function fun(timeID) {
+                            var date = new Date();  //创建对象  
+                            var y = date.getFullYear();     //获取年份  
+                            var m = date.getMonth() + 1;   //获取月份  返回0-11  
+                            var d = date.getDate(); // 获取日  
+                            var w = date.getDay();   //获取星期几  返回0-6   (0=星期天) 
+                            var ww = ' 星期' + '日一二三四五六'.charAt(new Date().getDay());//星期几
+                            var h = date.getHours();  //时
+                            var minute = date.getMinutes()  //分
+                            var s = date.getSeconds(); //秒
+                            // var sss = date.getMilliseconds(); //毫秒
+                            if (m < 10) {
+                                m = "0" + m;
+                            }
+                            if (d < 10) {
+                                d = "0" + d;
+                            }
+                            if (h < 10) {
+                                h = "0" + h;
+                            }
+
+
+                            if (minute < 10) {
+                                minute = "0" + minute;
+                            }
+
+
+                            if (s < 10) {
+                                s = "0" + s;
+                            }
+
+
+                            // if (sss < 10) {
+                            //     sss = "00" + sss;
+                            // } else if (sss < 100) {
+                            //     sss = "0" + sss;
+                            // }
+
+
+                            document.getElementById(timeID.id).innerHTML = y + "年" + m + "月" + d + "日" + "   " + h + ":" + minute + ":" + s;
+                            //document.write(y+"-"+m+"-"+d+"   "+h+":"+minute+":"+s);  
+                        }
+                    </script>
+                </div>
+                <!-- 日期时间 -->
+
+                <!-- 二维码 -->
+                <div class="time_right">
+                    <div class="right1">
+                        <div class="right">
+                            <img src="uploads/二维码.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- 二维码 -->
+
+            </div>
+            <!-- 日期时间盒子 -->
+
+            <!-- 照片盒子 -->
+            <div class="pic">
+                <div class="zhaopian">
+                    <div class="png">
+                        <!-- <img src="uploads/二维码.png" alt=""> -->
+
+
+                        <!-- 上传图片尝试 -->
+                        <input class="try123" type="file" name="" id="user-photo" />
+                        <div id="show-picture">
+                            <!-- <img src="./uploads/tubiao_06.png" alt=""> -->
+                        </div>
+                        <script>
+                            var getUserPhoto = document.getElementById("user-photo");
+                            getUserPhoto.onchange = function () {
+                                var file = this.files;
+                                console.log(file);
+                                var reader = new FileReader();
+                                reader.readAsDataURL(file[0]);
+                                reader.onload = function () {
+                                    var image = document.createElement("img");
+                                    image.width = "400";
+                                    image.src = reader.result;
+                                    var showPicture = document.getElementById("show-picture");
+                                    showPicture.append(image);
+                                };
+                            };
+                        </script>
+
+                        <!-- 上传图片尝试 -->
+
+
+
+                    </div>
+                </div>
+                <div class="normal">
+                    <img src="uploads/weijianyichang_03.png" alt="">
+                </div>
+            </div>
+
+            <!-- 照片盒子 -->
+
+            <!-- 核算盒子 -->
+            <section class="hesuan">
+                <div>
+                    <span><img src="uploads/tubiao_03.png" alt="">核酸<img src="uploads/xiaotu_03.png" alt=""
+                            class="wenhao">
+                    </span>
+                    <p class="blue">阴性</p>
+                    <h5>时间<i class="blue">1</i>天<img class="sx" src="./uploads/xiaotu_06.png" alt=""></h5>
+                </div>
+                <div>
+                    <span><img src="uploads/tubiao_06.png">疫苗<img src="uploads/xiaotu_03.png" alt="" class="wenhao">
+                    </span>
+
+                    <h5> <img class="kk" src="uploads/xiaotu_11.png" alt=""></h5>
+                </div>
+            </section>
+            <!-- 核算盒子 -->
+        </div>
+        <!-- top盒子 -->
+
+        <!-- bottom下面盒子 -->
+        <div class="bottom">
+            <div>
+                <h6>姓名：</h6>
+                <input class="bb" type="text" placeholder="侯**">
+            </div>
+            <div>
+                <h6>身份证号：</h6>
+                <input class="bb" type="text" placeholder="23**************28">
+
+            </div>
+            <div>
+                <h6>查询时间：</h6>
+                <input class="bb" type="text" placeholder="08-09 19:34">
+            </div>
+            <div>
+                <h6>失效时间：</h6>
+                <input class="aa" type="text" placeholder="08-09 24:00">
+            </div>
+        </div>
+        <!-- bottom下面盒子 -->
+
+
+        <!-- 返回首页 -->
+        <div class="last">
+            <a href="#">返回首页</a>
+        </div>
+        <!-- 返回首页 -->
+
+        <!-- copyright -->
+        <p class="copy">北京市大数据中心</p>
+        <!-- copyright -->
+    </div>
+</body>
+
+</html>

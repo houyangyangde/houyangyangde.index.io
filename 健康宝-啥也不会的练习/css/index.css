@@ -1,0 +1,343 @@
+body {
+    background-color: #f3f3f3;
+    background: url(../images/bg4.jpg) no-repeat fixed;
+    background-size: 100%;
+}
+
+
+/* .bg {
+    width: 100%;
+    min-width: 428px;
+    height: 100%;
+    min-height: 926px;
+    background: url(../images/bg.jpg) no-repeat;
+    background-size: 100%;
+    background-position: 0px -90px;
+} */
+
+
+/* 公共样式 */
+
+.blue {
+    color: #2090f7;
+}
+
+.red {
+    color: #ff2232;
+}
+
+/* 公共样式 */
+.top {
+    min-height: 519px;
+    margin: 73px 28px 0px;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    background-color: #fff;
+}
+
+.top .time {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    padding: 27px 0 15px 25px;
+}
+
+.top .time span {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: blueviolet;
+    overflow: hidden;
+
+}
+
+.show {
+    flex: 1;
+}
+
+.time_right {
+    margin-left: 15px;
+    width: 69px;
+    height: 53px;
+    overflow: hidden;
+}
+
+.time_right .right1 {
+    display: flex;
+    align-items: center;
+    /* margin-left: 40px; */
+    width: 100px;
+    height: 52px;
+    text-align: center;
+    background-color: rgba(194, 227, 254, .7);
+    border-radius: 25px;
+}
+
+
+.time_right .right {
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    margin-left: 3px;
+    text-align: center;
+    background-color: blueviolet;
+    overflow: hidden;
+}
+
+.time_right .right img {
+    width: 101%;
+}
+
+
+
+/* .time_right span img {
+    width: 51px;
+    height: 51px;
+} */
+
+
+
+/* #show_time0,
+#show_time {
+    width: 300px;
+    height: 100px;
+    color: #FFF;
+} */
+#show_time {
+    margin-top: 5px;
+    text-align: center;
+    width: 0px;
+    height: 46px;
+    font-size: 17px;
+    color: #666;
+}
+
+/* 照片部分 */
+
+
+/* 选择图片的尝试 */
+.png .try123 {
+    width: 200px;
+    height: 200px;
+    background-color: #12c700;
+    opacity: 0;
+    position: absolute;
+}
+
+
+/* 选择图片的尝试 */
+.pic {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.pic .zhaopian {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 220px;
+    /* background-color: #666; */
+    border: 12px dotted #12c700;
+    border-radius: 21px;
+    /* transition: all 0.2s; */
+    animation: move 1.3s infinite ease;
+
+}
+
+@keyframes move {
+    0% {
+        border-radius: 30px;
+    }
+
+    25% {
+        border-radius: 24px;
+    }
+
+    50% {
+        border-radius: 30px;
+    }
+
+    50% {
+        border-radius: 24px;
+    }
+
+    100% {
+        border-radius: 30px;
+    }
+}
+
+.pic .png {
+
+    width: 183px;
+    height: 183px;
+    border-radius: 8px;
+    background: url(../images/shangchuan.jpeg) no-repeat center;
+    background-size: 48%;
+    background-color: #f3f3f3;
+    overflow: hidden;
+}
+
+.normal {
+    width: 220px;
+    margin-top: 20px;
+}
+
+/* 照片部分 */
+
+/* 核酸检测 */
+.hesuan {
+    padding: 0px 16px;
+    background-color: #f9f9f9;
+    margin: 15px 10px 0px 17px;
+}
+
+.hesuan div {
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.hesuan div:nth-child(1) {
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.hesuan div:nth-child(2) {
+    padding: 6px 0;
+}
+
+.hesuan div span {
+    vertical-align: middle;
+    font-size: 27px;
+    color: #333;
+}
+
+.hesuan div:nth-child(1) span img:nth-child(1) {
+    width: 38px;
+}
+
+.hesuan .wenhao {
+    width: 22px;
+    height: 22px;
+}
+
+.hesuan div .sx {
+    margin-left: 4px;
+    width: 15px;
+    height: 12px;
+}
+
+.hesuan div:nth-child(2) span img:nth-child(1) {
+    margin-right: 3px;
+    width: 35px;
+}
+
+/* .hesuan div:nth-child(2) span img:nth-child(2) {
+    width: 150px;
+} */
+.hesuan div:nth-child(2) h5 .kk {
+    width: 120px;
+}
+
+.hesuan div p {
+    flex: 1;
+    margin-left: 25px;
+    font-size: 27px;
+}
+
+.hesuan div h5 {
+    padding-bottom: 8px;
+    font-weight: 400;
+    color: #9c9c9c;
+    font-size: 20px;
+}
+
+.hesuan div h5 i {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+/* 核酸检测 */
+
+/* 下面盒子 */
+.bottom {
+    /* display: flex; */
+    margin: 17px 28px 24px;
+    padding: 15px 30px 16px;
+    min-height: 180px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.bottom div {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    height: 39px;
+}
+
+.bottom div h6 {
+    font-weight: 400;
+    font-size: 22px;
+    color: #9c9c9c;
+}
+
+.bottom div h6:nth-child(n+1) {
+    white-space: nowrap;
+}
+
+
+.bottom div input {
+    flex: 1;
+    text-align: right;
+    /* margin-left: 136px; */
+    font-size: 20px;
+    width: 120px;
+    height: 22px;
+
+}
+
+.bottom .aa::placeholder {
+    color: #ff2232;
+}
+
+.bottom .bb::placeholder {
+    color: #333;
+}
+
+/* 下面盒子 */
+
+/* 返回首页 */
+
+.last a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 200px; */
+    height: 20px;
+    padding: 25px 0;
+    margin: 0 28px;
+    background-color: #1e90fb;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 20px;
+
+
+}
+
+/* 返回首页 */
+
+/* copyright */
+
+.copy {
+    margin-top: 15px;
+    text-align: center;
+    color: #c6c6c6;
+    font-size: 17px;
+}
+
+/* copyright */
